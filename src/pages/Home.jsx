@@ -2,13 +2,15 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Form from "../components/Form";
 import List from "../components/List";
+
+import styled from "styled-components";
 const Home = () => {
   const todos = useSelector((state) => state.todos);
 
   return (
     <div>
       <header>
-        <h1>To do List</h1>
+        <Title>To do List</Title>
       </header>
       <main>
         <Form />
@@ -20,3 +22,9 @@ const Home = () => {
 };
 
 export default Home;
+
+const Title = styled.h1`
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+`;

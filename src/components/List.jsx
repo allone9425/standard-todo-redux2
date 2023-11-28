@@ -8,7 +8,7 @@ function List({ isDone }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
-    <div>
+    <ListBox>
       <h2>{isDone === true ? "완료 " : "진행중"}</h2>
       {todos
         .filter((item) => {
@@ -44,7 +44,7 @@ function List({ isDone }) {
             </TodoBox>
           );
         })}
-    </div>
+    </ListBox>
   );
 }
 
@@ -55,7 +55,7 @@ const TodoBox = styled.div`
   background-color: #ffd60a;
   padding: 20px;
   border-radius: 10px;
-  margin: 50px 0;
+  margin: 50px 50px;
   h3 {
     color: #f95738;
   }
@@ -74,5 +74,19 @@ const TodoBox = styled.div`
     &:last-of-type {
       margin-left: 20px;
     }
+  }
+`;
+
+const ListBox = styled.div`
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  h2 {
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    width: 100%;
   }
 `;
