@@ -10,7 +10,7 @@ function Detail() {
 
   console.log(selectTodos);
   return (
-    <div>
+    <DetailBox>
       <h3>{selectTodos.title}</h3>
       <p>{selectTodos.body}</p>
       <p>{selectTodos.isDone}</p>
@@ -21,7 +21,7 @@ function Detail() {
       >
         이전으로
       </Button>
-    </div>
+    </DetailBox>
   );
 }
 
@@ -31,6 +31,21 @@ const Button = styled.button`
   background-color: #faf0ca;
   border: none;
   padding: 10px 20px;
+
   border-radius: 5px;
   font-weight: bold;
+`;
+
+const DetailBox = styled.div`
+  width: 400px;
+  background-color: #ffd60a;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 50px 50px;
+  h3 {
+    color: #f95738;
+  }
+  p {
+    color: #003566;
+  }
 `;

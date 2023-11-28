@@ -24,7 +24,7 @@ const Home = () => {
 export default Home;
 
 const Title = styled.h1`
-  color: red;
+  color: #f95738;
   text-align: center;
   margin-bottom: 10px;
 `;
